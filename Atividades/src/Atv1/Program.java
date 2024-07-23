@@ -8,17 +8,18 @@ public class Program {
 
         List<Livro> lista = new ArrayList<>();
 
-        Livro l1 = new Livro("O Senhor dos Anéis", "J.R.R. Tolkien", "HarperCollins", 1200, "Fantasia", 100.00);
-        Livro l2 = new Livro("Harry Potter", "J.K. Rowling", "Rocco", 500, "Fantasia", 50.00);
-        Livro l3 = new Livro("O Peque Príncipe", "Antoine de Saint-Exupéry", "Gallimard", 100, "Infantil", 20.00);
-        Livro l4 = new Livro("Dom Quixote", "Miguel de Cervantes", "Penguin", 800, "Aventura", 80.00);
-        Livro l5 = new Livro("A Bíblia", "Deus", "Vaticano", 2000, "Religioso", 100.00);
+        Livro l1 = new Livro("Livro 1", "Autor 1", "Editora 1", 100, "Estilo 1", 50.0, 2021);
+        Livro l2 = new Livro("Livro 2", "Autor 2", "Editora 2", 200, "Estilo 2", 100.0, 2020);
+        Livro l3 = new Livro("Livro 3", "Autor 3", "Editora 3", 300, "Estilo 3", 150.0, 2019);
+        Livro l4 = new Livro("Livro 4", "Autor 4", "Editora 4", 400, "Estilo 4", 200.0, 2018);
+        Livro l5 = new Livro("Livro 5", "Autor 5", "Editora 5", 500, "Estilo 5", 250.0, 2017);
 
         lista.add(l1);
         lista.add(l2);
         lista.add(l3);
         lista.add(l4);
         lista.add(l5);
+
 
         System.out.println("Lista de livros:");
         for(Livro livro : lista){

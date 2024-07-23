@@ -7,18 +7,19 @@ public class Livro {
     private Integer numPag;
     private String estilo;
     private Double valor;
-    private int Ano;
+    private int ano;
 
     public Livro() {
     }
 
-    public Livro(String nomeLivro, String autor, String editora, Integer numPag, String estilo, Double valor) {
+    public Livro(String nomeLivro, String autor, String editora, Integer numPag, String estilo, Double valor, int ano) {
         this.nomeLivro = nomeLivro;
         this.autor = autor;
         this.editora = editora;
         this.numPag = numPag;
         this.estilo = estilo;
         this.valor = valor;
+        this.ano = ano;
     }
 
     public String getNomeLivro() {
@@ -70,25 +71,20 @@ public class Livro {
     }
 
     public int getAno() {
-        return Ano;
+        return ano;
     }
 
     public void setAno(int ano) {
-        Ano = ano;
+       this.ano = ano;
     }
 
     public void reajusteValor(){
         if (getAno() < 2020){
-            valor += valor * 0.10;
+           valor += getValor() * 0.1;
         }
         else {
-            valor += valor * 0.8;
+            valor += getValor() * 0.08;
         }
-
-    }
-
-    public int retornarAno(String nomeLivro){
-        return getAno();
 
     }
 
