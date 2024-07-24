@@ -1,4 +1,5 @@
 package Atv1;
+
 public class Program {
     public static void main(String[] args) {
 
@@ -12,13 +13,18 @@ public class Program {
 
         for (Livro livro : livros) {
             livro.mostrarLivro(); //Irá exibir os dados dos livros percorrendo o array
-            livro.reajusteValor(); //Irá reajustar o valor dos livros percorrendo o array
+            if (livro.getAno() < 2020) {
+                livro.reajusteValor(10.0); //Se o ano do livro for menor que 2020, irá reajustar o valor em 10%
+            } else {
+                livro.reajusteValor(8.0); //Se o ano do livro for maior ou igual a 2020, irá reajustar o valor em 8%
+            }
+
         }
 
         System.out.println("\nApós reajuste de valor:\n");
 
-        for (Livro livro : livros) { //Irá exibir novamente os dados dos livros percorrendo o array
-            livro.mostrarLivro();
+        for (Livro livro : livros) {
+            livro.mostrarLivro(); //Irá exibir os dados dos livros percorrendo o array
         }
 
 

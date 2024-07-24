@@ -75,20 +75,14 @@ public class Livro {
     }
 
     public void setAno(int ano) {
-       this.ano = ano;
+        this.ano = ano;
     }
 
-    public void reajusteValor(){
-        if (getAno() < 2020){
-           valor += getValor() * 0.1;
-        }
-        else {
-            valor += getValor() * 0.08;
-        }
-
+    public void reajusteValor(Double percentual) {
+        valor += getValor() * percentual / 100;
     }
 
-    public void mostrarLivro(){
+    public void mostrarLivro() {
         System.out.println("Nome: " + getNomeLivro());
         System.out.println("Autor: " + getAutor());
         System.out.println("Editora: " + getEditora());
